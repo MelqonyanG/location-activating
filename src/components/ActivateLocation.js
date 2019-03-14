@@ -64,7 +64,9 @@ class ActivateLocation extends Component {
     return (
       <div className="container">
         <ul className="list-group">
-          {addresses}
+          {
+            addresses.length > 0 ? addresses : <h1>There is no requests.</h1> 
+          }
         </ul>
       </div>
     );
