@@ -12,7 +12,9 @@ Location-Activating uses a number of open source projects to work properly:
 ##### client side
 * React js
 * react-leaflet
+* socket.io-client
 * Bootstrap
+
 #####   server side
 * Python3
 * Flask
@@ -30,7 +32,7 @@ $ cd location-activating/
 $ pip install -r requirements.txt
 $ python server.py
 ```
-Install the dependencies and start the server.
+Install the dependencies and start the client.
 ```sh
 $ cd location-activating/
 $ npm install
