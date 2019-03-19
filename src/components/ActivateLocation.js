@@ -23,7 +23,8 @@ class ActivateLocation extends Component {
   }
 
   activateAddress(sid){
-    document.getElementById(sid).disabled="disabled";
+    document.getElementById(`activate${sid}`).disabled="disabled";
+    document.getElementById(`ignore${sid}`).disabled="disabled";
     this.props.socket.emit('activate', sid);
   }
 
@@ -49,11 +50,11 @@ class ActivateLocation extends Component {
             {address['address']}
           </div>
           <div className='col-md-3'>
-            <button type="button" className="btn btn-light" id={address['sid']}
+            <button type="button" className="btn btn-light" id={`activate${address['sid']}`}
                 onClick={(addressSid) => this.activateAddress(address['sid'])}>
               Activate
             </button>
-            <button type="button" className="btn btn-light" id={address['sid']}
+            <button type="button" className="btn btn-light" id={`ignore${address['sid']}`}
                 onClick={(addressSid) => this.ignoreAddress(address['sid'])}>
               Ignore
             </button>
@@ -65,7 +66,7 @@ class ActivateLocation extends Component {
       <div className="container">
         <ul className="list-group">
           {
-            addresses.length > 0 ? addresses : <h1>There is no requests.</h1> 
+            addresses.length > 0 ? addresses : <h1>There is no requests.</h1>
           }
         </ul>
       </div>
