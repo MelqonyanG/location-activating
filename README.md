@@ -48,4 +48,4 @@ or
 localhost:3000
 ```
 * To log in as administrator enter **admin** in the username field.
-* To log in as user enter any username, select username and click to **send location** button.
+* To log in as user enter any username, set marker and click to **send location** button.
